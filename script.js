@@ -26,7 +26,7 @@ async function populateDropdown(movies) {
 }
 
 async function fetchMoviePoster(title) {
-  const response = await fetch(`http://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${OMDB_API_KEY}`);
+  const response = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${OMDB_API_KEY}`);
   const data = await response.json();
   if (data.Response === "True") {
     return data.Poster;
